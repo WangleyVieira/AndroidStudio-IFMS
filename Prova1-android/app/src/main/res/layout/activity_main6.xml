@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity6">
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="26dp"
+        android:text="Total a pagar"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/valorInserido"
+        app:layout_constraintStart_toStartOf="@+id/valorInserido" />
+
+    <EditText
+        android:id="@+id/valorInserido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Gorjetas"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toEndOf="@+id/valorInserido"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup2" />
+
+    <Button
+        android:id="@+id/buttonDiminuirValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="20dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/acrescimoNum"
+        app:layout_constraintEnd_toStartOf="@+id/acrescimoNum"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAumentarValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/acrescimoNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/acrescimoNum" />
+
+    <EditText
+        android:id="@+id/acrescimoNum"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="214dp"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="0"
+        android:inputType="number"
+        android:selectAllOnFocus="false"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/textView27"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAumentarValor"
+        app:layout_constraintStart_toEndOf="@+id/buttonDiminuirValor"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup2" />
+
+    <Button
+        android:id="@+id/buttonLimparDados1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="limpar dados"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCalcularValor"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDiminuirValor"
+        app:layout_constraintStart_toEndOf="@+id/buttonDiminuirValor" />
+
+    <Button
+        android:id="@+id/buttonCalcularValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="calcular"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAumentarValor"
+        app:layout_constraintStart_toStartOf="@+id/buttonAumentarValor"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAumentarValor" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total da Conta"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView26"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toEndOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLimparDados1" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="18dp"
+        android:text="Gorjeta"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="43dp"
+        android:text="Total entre as pessoas"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/totalConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/buttonCalcularValor"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalcularValor" />
+
+    <TextView
+        android:id="@+id/gorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/totalPessoas"
+        app:layout_constraintEnd_toStartOf="@+id/totalConta"
+        app:layout_constraintStart_toStartOf="@+id/totalConta" />
+
+    <TextView
+        android:id="@+id/totalPessoas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gorjeta"
+        app:layout_constraintStart_toStartOf="@+id/gorjeta" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="186dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outro" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="117dp"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:inputType="number" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity5">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="min"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/campoMinDest"
+        app:layout_constraintStart_toEndOf="@+id/buttonLimparDados" />
+
+    <TextView
+        android:id="@+id/campoMinDest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:text="_____"
+        app:layout_constraintBottom_toBottomOf="@+id/textView21"
+        app:layout_constraintEnd_toStartOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Hora no destino: "
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/campoHoraDestino"
+        app:layout_constraintEnd_toStartOf="@+id/campoHoraDestino" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="15dp"
+        android:text="------- DESTINO-------"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/buttonDiminuirValor" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="16dp"
+        android:text="Fuso Horário"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="7dp"
+        android:text="------- ORIGEM-------"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="9dp"
+        android:text="Hora: "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/campoHoraOrigem"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/campoHoraOrigem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="h"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintBottom_toBottomOf="@+id/campoMinOrigem"
+        app:layout_constraintEnd_toStartOf="@+id/campoMinOrigem"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <EditText
+        android:id="@+id/campoMinOrigem"
+        android:layout_width="116dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="77dp"
+        android:ems="10"
+        android:hint="min"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAumentarValor"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="194dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/campoHoraOrigem">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="GMT -2 (Horário Padrão de Fernando de Noronha)" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GMT -3(Horário Padrão de Brasilia)" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GMT -5(Horário Padrão do Acre)" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GMT -4(Horário Padrão de Amazonas)" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginBottom="287dp"
+        android:text="Informe o fuso horário no destino"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campoHoraOrigem" />
+
+    <Button
+        android:id="@+id/buttonDiminuirValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="21dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/acrescimoNum"
+        app:layout_constraintEnd_toStartOf="@+id/acrescimoNum"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAumentarValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/acrescimoNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/acrescimoNum" />
+
+    <EditText
+        android:id="@+id/acrescimoNum"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="67dp"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="0"
+        android:inputType="number"
+        android:selectAllOnFocus="false"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCalcularDest"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAumentarValor"
+        app:layout_constraintStart_toEndOf="@+id/buttonDiminuirValor"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/campoHoraDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="28dp"
+        android:text="_____"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLimparDados"
+        app:layout_constraintEnd_toStartOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:text="h"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/campoHoraDestino"
+        app:layout_constraintEnd_toStartOf="@+id/campoMinDest" />
+
+    <Button
+        android:id="@+id/buttonLimparDados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="LIMPAR CAMPOS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCalcularDest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="25dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/acrescimoNum" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
