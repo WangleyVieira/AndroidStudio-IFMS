@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "450501246284",
+    "project_id": "prova-2-completo",
+    "storage_bucket": "prova-2-completo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450501246284:android:c2a7719d9d16a6344a23e9",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450501246284-qful9jmelmbi4bc6sqllhbd672llul49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKg0u26ECNcsvtrGbudCi1Flzn7hMeccU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450501246284-qful9jmelmbi4bc6sqllhbd672llul49.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
